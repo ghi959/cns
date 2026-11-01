@@ -1,0 +1,3 @@
+cryptography>=43
+sympy>=1.12
+liboqs-python>=0.16.0

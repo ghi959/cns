@@ -1,0 +1,32 @@
+CNS LAB 16-SCRIPT QUICK REFERENCE — LIBRARY-ENABLED VERSION
+
+Experiment 1
+  01_fermat.py          n=17 -> Probably prime
+  02_euler_jacobi.py    n=17 -> Probably prime  (SymPy required)
+  03_miller_rabin.py   n=17 -> Prime for n < 2^64
+
+Experiment 3
+  04_rsa.py             8 -> 134 -> 8
+  05_elgamal.py         10 -> (17,5) -> 10
+  06_diffie_hellman.py  Public 8 and 19; shared 2
+  07_ecc_ecdh.py        P-256 shared secret agreement; library required
+
+Experiment 2
+  08_caesar.py          HELLO -> AXEEH
+  09_monoalphabetic.py  HELLO -> VSJJH
+  10_vigenere.py        HELLO -> BCPNC
+  11_playfair.py        HELLO -> KURCMC; decrypted HELXLO
+  12_hill.py            HI -> BA; decrypted HI (SymPy required)
+
+Experiment 8
+  13_rsa_pss.py         RSA-PSS 3072-bit, original PASS / tampered FAIL
+  14_ecdsa.py           ECDSA P-256, original PASS / tampered FAIL
+  15_ml_dsa.py          REAL ML-DSA-44 via liboqs (requires native liboqs)
+  16_slh_dsa.py         REAL SLH-DSA-SHA2-128s via liboqs (requires native liboqs)
+
+Installation:
+  python -m pip install cryptography sympy
+  python -m pip install liboqs-python   # only if building/using PQ variants
+
+EXAM RESTRICTION: These scripts USE libraries/imports. If your examiner forbids
+libraries, they are REFERENCE ONLY. Use your no-import pack for practice.
